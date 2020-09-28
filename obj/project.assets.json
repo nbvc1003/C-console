@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\cSharp_projects\\hello\\hello.csproj",
+      "projectUniqueName": "D:\\Dev\\cSharp_projects\\Console\\hello\\hello.csproj",
       "projectName": "hello",
-      "projectPath": "D:\\Dev\\cSharp_projects\\hello\\hello.csproj",
+      "projectPath": "D:\\Dev\\cSharp_projects\\Console\\hello\\hello.csproj",
       "packagesPath": "C:\\Users\\nbvc\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\cSharp_projects\\hello\\obj\\",
+      "outputPath": "D:\\Dev\\cSharp_projects\\Console\\hello\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nbvc\\AppData\\Roaming\\NuGet\\NuGet.Config"

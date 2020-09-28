@@ -11,3 +11,16 @@ D:\Dev\cSharp_projects\hello\obj\Debug\netcoreapp3.1\hello.csproj.CoreCompileInp
 D:\Dev\cSharp_projects\hello\obj\Debug\netcoreapp3.1\hello.dll
 D:\Dev\cSharp_projects\hello\obj\Debug\netcoreapp3.1\hello.pdb
 D:\Dev\cSharp_projects\hello\obj\Debug\netcoreapp3.1\hello.genruntimeconfig.cache
+D:\Dev\cSharp_projects\Console\hello\bin\Debug\netcoreapp3.1\hello.exe
+D:\Dev\cSharp_projects\Console\hello\bin\Debug\netcoreapp3.1\hello.deps.json
+D:\Dev\cSharp_projects\Console\hello\bin\Debug\netcoreapp3.1\hello.runtimeconfig.json
+D:\Dev\cSharp_projects\Console\hello\bin\Debug\netcoreapp3.1\hello.runtimeconfig.dev.json
+D:\Dev\cSharp_projects\Console\hello\bin\Debug\netcoreapp3.1\hello.dll
+D:\Dev\cSharp_projects\Console\hello\bin\Debug\netcoreapp3.1\hello.pdb
+D:\Dev\cSharp_projects\Console\hello\obj\Debug\netcoreapp3.1\hello.csprojAssemblyReference.cache
+D:\Dev\cSharp_projects\Console\hello\obj\Debug\netcoreapp3.1\hello.AssemblyInfoInputs.cache
+D:\Dev\cSharp_projects\Console\hello\obj\Debug\netcoreapp3.1\hello.AssemblyInfo.cs
+D:\Dev\cSharp_projects\Console\hello\obj\Debug\netcoreapp3.1\hello.csproj.CoreCompileInputs.cache
+D:\Dev\cSharp_projects\Console\hello\obj\Debug\netcoreapp3.1\hello.dll
+D:\Dev\cSharp_projects\Console\hello\obj\Debug\netcoreapp3.1\hello.pdb
+D:\Dev\cSharp_projects\Console\hello\obj\Debug\netcoreapp3.1\hello.genruntimeconfig.cache

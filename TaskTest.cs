@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -20,7 +21,7 @@ namespace hello
 
 
 
-    class Program
+    class TaskTest
     {
         static async Task Main(string[] args)
         {
@@ -28,29 +29,38 @@ namespace hello
             Console.WriteLine("coffee is ready");
 
             Task<Egg> eggtask = FryEggsAsync(2);
-            Egg effs = await eggtask;
-            Console.WriteLine("eggs are ready");
-
             Task<Bacon> baconTask = FryBaconAsync(3);
-            Bacon bacon = await baconTask;
-            Console.WriteLine("bacon is ready");
+            //Task<Toast> toastTask = ToastBreadAsync(2);
+            Task<Toast> toastTask = MakeToastWithButterAndJamAsync(2);
 
+            var _breakfastTasks = new List<Task> {eggtask, baconTask, toastTask};
+            while(_breakfastTasks.Count > 0){
+                Task finishedTask = await Task.WhenAny(_breakfastTasks);
+                if(finishedTask == eggtask)
+                    Console.WriteLine("egg are ready");
+                else if(finishedTask == baconTask)
+                    Console.WriteLine("bacon is ready");
+                else if (finishedTask == toastTask);
 
-            Task<Toast> toastTask = ToastBreadAsync(2);
-            Toast toast = await toastTask;
-            
-            ApplyButter(toast);
-            ApplyJam(toast);
-            Console.WriteLine("toast is ready");
+                _breakfastTasks.Remove(finishedTask);               
+
+            }
 
             Juice oj = PourOJ();
             Console.WriteLine("oj is ready");
+
             Console.WriteLine("Breakfast is ready!");
         }
 
+        private static async Task<Toast> MakeToastWithButterAndJamAsync(int number){
+            var toast = await ToastBreadAsync(number);
+            ApplyButter(toast);
+            ApplyJam(toast);
+            return toast;
+        }
         private static Juice PourOJ()
         {
-            Console.WriteLine("Pouring orange juice");
+            Console.WriteLine("PourOJ Pouring orange juice");
             return new Juice();
         }
 
@@ -64,15 +74,16 @@ namespace hello
         {
             for (int slice = 0; slice < slices; slice++)
             {
-                Console.WriteLine("Putting a slice of bread in the toaster");
+                Console.WriteLine("Toast Putting a slice of bread in the toaster");
             }
-            Console.WriteLine("Start toasting...");
+            Console.WriteLine("Toast Start toasting...");
             Task.Delay(3000).Wait();
-            Console.WriteLine("Remove toast from toaster");
+            Console.WriteLine("Toast Remove toast from toaster");
 
             return new Toast();
         }
 
+/*
         private static Bacon FryBacon(int slices)
         {
             Console.WriteLine($"putting {slices} slices of bacon in the pan");
@@ -88,6 +99,7 @@ namespace hello
 
             return new Bacon();
         }
+        */
         private static async Task<Bacon> FryBaconAsync(int slices)
         {
             Console.WriteLine($"putting {slices} slices of bacon in the pan");
@@ -117,6 +129,7 @@ namespace hello
         }
 
 
+/*
         private static Egg FryEggs(int howMany)
         {
             Console.WriteLine("Warming the egg pan...");
@@ -128,7 +141,7 @@ namespace hello
 
             return new Egg();
         }
-
+*/
         private static async Task<Egg> FryEggsAsync(int howMany){
 
             Console.WriteLine("Warming the egg pan...");
